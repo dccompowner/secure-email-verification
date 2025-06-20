@@ -3,7 +3,7 @@
   "manifest_version": 3,
   "name": "Gmail Email Verifier",
   "version": "0.1",
-  "description": "Signs outgoing Gmail emails with cryptographic hash and pubkey header.",
+  "description": "Signs outgoing Gmail emails with cryptographic hash and verifies inbound signatures.",
   "permissions": ["scripting", "storage"],
   "host_permissions": ["https://mail.google.com/*"],
   "action": {
