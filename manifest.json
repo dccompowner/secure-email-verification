@@ -1,0 +1,26 @@
+// === manifest.json ===
+{
+  "manifest_version": 3,
+  "name": "Gmail Email Verifier",
+  "version": "0.1",
+  "description": "Signs outgoing Gmail emails with cryptographic hash and pubkey header.",
+  "permissions": ["scripting", "storage"],
+  "host_permissions": ["https://mail.google.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
